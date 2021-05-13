@@ -99,5 +99,16 @@ plt.ylim((-1.5,1.5))
 plt.title('深度量化结果一致性统计图')
 plt.grid()
 plt.show()
+######
+for ii in range(1,32):
+    x = np.ones(15)
+    x_values = x[:]*ii
+    d_values = listDC[ii-1]
+    plt.scatter(x_values,d_values,c = d_values,cmap=plt.cm.Reds,edgecolors = (0,0,0),s = 20)
+plt.xlim((0,32))
+plt.ylim((-1.5,1.5))
+plt.title('深度量化结果一致性统计图')
+plt.grid()
+plt.show()
 
 print()
